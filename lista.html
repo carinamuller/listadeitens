@@ -3,10 +3,11 @@
     <head>
         <title>Grocery Bud</title>
         <h1>Lista de compras</h1>
-         <link rel="stylesheet" href="mercado.css">
+         <link rel="stylesheet" href="./mercado.css">
     </head>
     <body>
-        <div class="inputs">
+        <div class="body">
+        <div class="adiciona">
     <label>Item</label>
         <input type="text" id="item" />
         <button onclick="adicionarItens()">Adicionar item</button>
@@ -24,7 +25,7 @@
             itens.push(getInformacoesdosItens());
             alert('Este item foi adicionado á lista de compras!');
             
-            document.getElementById('itens').value = '';
+            document.getElementById('item').value = '';
         }
         
         function mostrarItens() {
@@ -32,13 +33,9 @@
                 console.log('Itens: '+ itens.item)
             }
         }
-    
-        function criartabela(){
-            const table =document.createElement("table")
-            table.setAttribute("border","1")
-        }
                 
         </script>
+        </div>
     </body>
     
 </html>
