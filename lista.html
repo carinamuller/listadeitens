@@ -1,11 +1,44 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Lista de compras</title>
+        <title>Grocery Bud</title>
+        <h1>Lista de compras</h1>
+         <link rel="stylesheet" href="mercado.css">
     </head>
-    <div class="input">
     <body>
-        <input type="text">
-    </body>
+        <div class="inputs">
+    <label>Item</label>
+        <input type="text" id="item" />
+        <button onclick = "adicionarItens()">Adicionar item</button>
     </div>
+        <script>
+          
+             var itens = [];
+
+        function getInformacoesdosItens() {
+            return {
+                'itens': document.getElementById('itens').value,
+        }
+    }
+        function adicionarItens() {
+            itens.push(getInformacoesdosItens());
+            alert('Este item foi adicionado á lista de compras!');
+            
+            document.getElementById('itens').value = '';
+        }
+        
+        function mostrarItens() {
+            for (itens of itens) {
+                console.log('Itens: '+ itens.itens)
+            }
+        }
+    
+        function criartabela(){
+            const table =document.createElement("table")
+            table.setAttribute("border","1")
+        }
+                
+        </script>
+    </body>
+    
 </html>
